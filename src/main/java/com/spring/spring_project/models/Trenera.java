@@ -10,6 +10,7 @@ public class Trenera {
     private String Name;
     private String Program;
     private String imgsrc;
+    private String description;
 
     public long getId() {
         return id;
@@ -50,5 +51,12 @@ public class Trenera {
         Name = name;
         Program = program;
         this.imgsrc = imgsrc;
+    }
+
+    public Trenera(String name, String program, String imgsrc, String description) {
+        Name = name;
+        Program = program;
+        this.imgsrc = imgsrc;
+        this.description = description;
     }
 }

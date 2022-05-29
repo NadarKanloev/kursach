@@ -1,13 +1,12 @@
 body{
     background-color: #000
 }
-
-
-
 .wrap{
     background-color: #000;
 }
-
+.table-borderless{
+    color: #cc9966;
+}
 .intro {
     display: flex;
     flex-direction: column;
@@ -21,6 +20,7 @@ body{
     color: #cc9966;
     text-align: center;
 }
+
 footer{
     padding-bottom: 0;
     background: #000
