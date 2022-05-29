@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link th:href="@{/css/style.css}" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</head>
+<body class="intro">
+<header th:insert="blocs/header :: header"></header>
+    </div>
+    <div class="intro">
+        <div class="container">
+            <div class="intro_inner">
+                <h1>Заявка</h1>
+                <form action="/addTrener" method="post">
+                    <input type="text" name="name" placeholder="Введите Ваше Имя и Фамилию" class = "form-control"><br>
+                    <input type="text" name="program" placeholder="Специальность" class = "form-control"><br>
+                    <input type="text" name="imgsrc" placeholder="Ссылка на фотографию" class = "form-control"><br>
+                    <button type="submit" class="btn btn-success">Подать заявку</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer th:insert="blocs/footer :: footer"></footer>
+
+</body>
+</html>

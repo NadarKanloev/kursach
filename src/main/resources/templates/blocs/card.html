@@ -1,0 +1,10 @@
+<div class="card text-white bg-dark mb-3" style="width: 12rem;">
+    <div th:each="el : ${trenera}" class="card-header">
+        <h4 th:text="${el.name}"/>
+        <img th:src="@{${el.imgsrc}}" class="card-img-top" alt="Фотографии нет">
+        <div class="card-body">
+            <p class="card-text"><p th:text="${el.program}"/></p>
+            <a href="tai.html" class="btn btn-dark">Подробнее</a>
+        </div>
+    </div>
+</div>
