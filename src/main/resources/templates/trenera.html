@@ -23,7 +23,7 @@
       </thead>
       <tbody>
       <tr th:each="el : ${trenera}">
-        <td><a th:href="'trenera'+'/'+ ${el.id}"/><p th:text="${el.name}"/></td>
+        <td><a th:href="'trenera'+'/'+ ${el.id}" style="color: #cc9966"/><p th:text="${el.name}"/></td>
         <td><p th:text="${el.program}"/></td>
       </tbody>
     </table>

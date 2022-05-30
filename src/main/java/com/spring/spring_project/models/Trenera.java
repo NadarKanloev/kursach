@@ -12,6 +12,14 @@ public class Trenera {
     private String imgsrc;
     private String description;
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     public long getId() {
         return id;
     }

@@ -15,9 +15,10 @@
 <div class="intro">
     <div class="container">
         <figure class="figure" th:each="el : ${trenera}">
+            <h3 th:text="${el.name}"></h3>
             <img th:src="@{${el.imgsrc}}" class="figure-img img-fluid rounded" alt="..." width="500", height="500">
             <figcaption class="figure-caption">
-
+                <h3 th:text="${el.description}"/>
             </figcaption>
         </figure>
     </div>
