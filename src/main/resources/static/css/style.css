@@ -1,7 +1,13 @@
 body{
     background-color: #000
 }
-
+.card{
+    display: inline-block;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
 
 
 
@@ -21,4 +27,7 @@ body{
 }
 footer{
     background: #000
+}
+header{
+    position: fixed;
 }

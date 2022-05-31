@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link th:href="@{/css/style.css}" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</head>
+<body class="intro">
+<header th:insert="blocs/header :: header"></header>
+<div class="intro">
+    <div class="container">
+        <div class="intro_inner">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col" th:each="el : ${sportPit}">
+                    <div class="card text-white bg-dark h-100" style="max-width: 16rem;">
+                        <img th:src="@{${el.imgsrc}}" class="card-img-top">
+                        <div class="card-body">
+                            <p class="card-title"><p th:text="${el.title}"/></p>
+                            <h5><p th:text="${el.price}"/></h5>
+                            <br>
+                            <a th:href="'sportPit'+'/'+ ${el.id}" class="btn btn-dark">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer th:insert="blocs/footer :: footer"></footer>
+</body>
+</html>

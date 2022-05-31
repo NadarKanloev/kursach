@@ -42,5 +42,4 @@ public class InstructorController {
         model.addAttribute("trenera", treneraArrayList);
         return "Trener";
     }
-
 }

@@ -16,6 +16,4 @@ public class MainController {
     public String about(Model model){
         return "about";
     }
-
-
 }

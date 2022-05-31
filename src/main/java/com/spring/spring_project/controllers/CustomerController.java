@@ -19,7 +19,6 @@ public class CustomerController {
     public String Zayavka(Model model){return "zayavka";}
     @PostMapping("/zayavka")
     public String PostZayavka(@RequestParam String full_name, @RequestParam String number,@RequestParam String email, @RequestParam String section, Model model){
-
         Customer customer = new Customer(full_name, number, email, section);
         customerRepository.save(customer);
         return "Spasibo";

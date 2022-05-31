@@ -30,5 +30,4 @@ public class EdinController {
         model.addAttribute("edin", edinArrayList);
         return "edPage";
     }
-
 }

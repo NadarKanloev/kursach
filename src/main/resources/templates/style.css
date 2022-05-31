@@ -1,6 +1,9 @@
 body{
     background-color: #000
 }
+.card{
+    display: inline-block;
+}
 .wrap{
     background-color: #000;
 }

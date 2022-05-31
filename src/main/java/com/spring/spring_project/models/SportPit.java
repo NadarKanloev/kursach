@@ -6,17 +6,14 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Fitnes {
-
+public class SportPit {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
 
     private long id;
     private String title;
+    private String Price;
     private String imgsrc;
-    private String WorkingDay;
-    private String TrainingTime;
-    private String Solo;
     private String description;
 
     public String getDescription() {
@@ -27,7 +24,7 @@ public class Fitnes {
         this.description = description;
     }
 
-    public Fitnes() {
+    public SportPit() {
     }
 
     public long getId() {
@@ -46,35 +43,19 @@ public class Fitnes {
         this.title = title;
     }
 
+    public String getPrice() {
+        return Price;
+    }
+
+    public void setPrice(String price) {
+        Price = price;
+    }
+
     public String getImgsrc() {
         return imgsrc;
     }
 
     public void setImgsrc(String imgsrc) {
         this.imgsrc = imgsrc;
-    }
-
-    public String getWorkingDay() {
-        return WorkingDay;
-    }
-
-    public void setWorkingDay(String workingDay) {
-        WorkingDay = workingDay;
-    }
-
-    public String getTrainingTime() {
-        return TrainingTime;
-    }
-
-    public void setTrainingTime(String trainingTime) {
-        TrainingTime = trainingTime;
-    }
-
-    public String getSolo() {
-        return Solo;
-    }
-
-    public void setSolo(String solo) {
-        Solo = solo;
     }
 }
