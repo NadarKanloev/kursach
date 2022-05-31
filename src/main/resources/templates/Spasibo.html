@@ -14,23 +14,9 @@
 <header th:insert="blocs/header :: header"></header>
 <div class="intro">
     <div class="container">
-        <table class="table table-dark table-striped" >
-            <thead>
-            <tr>
-                <th scope="col">Секция</th>
-                <th scope="col">Описание</th>
-                <th scope="col">Дни тренировок</th>
-                <th scope="col">Время тренировок</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr th:each="el : ${edin}">
-                <td><a th:href="'edin'+'/'+ ${el.id}" style="color: #cc9966"/><p th:text="${el.title}"/></td>
-                <td><p th:text="${el.description}"/></td>
-                <td><p th:text="${el.workingDay}"/></td>
-                <td><p th:text="${el.trainingTime}"/></td>
-            </tbody>
-        </table>
+        <div class="intro_inner">
+            <h1 class="intro_title"> НАЧНИ СЕГОДНЯ, ЧТОБЫ НЕ ЖАЛЕТЬ ЗАВТРА</h1>
+        </div>
     </div>
 </div>
 <footer th:insert="blocs/footer :: footer"></footer>

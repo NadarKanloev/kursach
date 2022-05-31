@@ -14,25 +14,16 @@
 <header th:insert="blocs/header :: header"></header>
 <div class="intro">
     <div class="container">
-        <table class="table table-dark table-striped" >
-            <thead>
-            <tr>
-                <th scope="col">Секция</th>
-                <th scope="col">Описание</th>
-                <th scope="col">Дни тренировок</th>
-                <th scope="col">Время тренировок</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr th:each="el : ${edin}">
-                <td><a th:href="'edin'+'/'+ ${el.id}" style="color: #cc9966"/><p th:text="${el.title}"/></td>
-                <td><p th:text="${el.description}"/></td>
-                <td><p th:text="${el.workingDay}"/></td>
-                <td><p th:text="${el.trainingTime}"/></td>
-            </tbody>
-        </table>
+        <figure class="figure" th:each="el : ${edin}">
+            <h3 th:text="${el.title}"></h3>
+            <img th:src="@{${el.imgsrc}}" class="figure-img img-fluid rounded" alt="..." width="500", height="500">
+            <figcaption class="figure-caption">
+                <h3 th:text="${el.description}"/>
+            </figcaption>
+        </figure>
     </div>
 </div>
+<h1><a href="/zayavka" style="color: #cc9966">Записаться</a></h1>
 <footer th:insert="blocs/footer :: footer"></footer>
 </body>
 </html>
